@@ -33,4 +33,15 @@ data = [
 def average_per_category(data):
     totaldict = {}
     for item in data:
-        totaldict[item] = totaldict.get(item, 0) + value
+        category = item["category"]
+        amount = item["amount"]
+        if category not in totaldict:
+            totaldict[category] = [amount, 1]
+        else:
+            totaldict[category][0] += amount
+            totaldict[category][1] += 1
+
+     result_dict = {}
+    for category in totaldict:
+        result_dict[category] = totaldict[category][0] / totaldict[category][1]
+    return result_dict
