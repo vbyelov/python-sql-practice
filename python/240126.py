@@ -12,15 +12,30 @@
 # Example:
 # max_number([3, 7, 2, 10, 4]) -> 10
 import time
-time.sleep(0.5)
 
 def max_number(numbers):
     current_max = numbers[0]
+    print("Start max:", current_max)
+    print("-" * 30)
+
     for number in numbers:
+        print("\033c", end="")
+        print("Comparing number:", number)
+        print("Current max before compare:", current_max)
+
         if number > current_max:
             current_max = number
-        print
+            print("→ New max found!")
+
+        else:
+            print("→ Max unchanged")
+
+        print("Current max now:", current_max)
+        print("-" * 30)
+
+        time.sleep(0.5)
     return current_max
+
 
 
 numbers = [
@@ -32,4 +47,4 @@ numbers = [
 ]
 
 result = max_number(numbers)
-print("Maximum number is:", result)
+print("FINAL MAX:", result)
