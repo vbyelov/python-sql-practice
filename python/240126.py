@@ -33,7 +33,7 @@ def max_number(numbers):
         print("Current max now:", current_max)
         print("-" * 30)
 
-        time.sleep(0.5)
+        time.sleep(0.05)
     return current_max
 
 
@@ -41,7 +41,7 @@ def max_number(numbers):
 numbers = [
     12, 45, 3, 67, 23, 89, 4, 56, 78, 9,
     34, 21, 90, 11, 6, 54, 32, 18, 27, 41,
-    73, 5, 60, 38, 14, 25, 80, 19, 48, 2,
+    73, 5, 60, 38, 133, 25, 80, 19, 48, 2,
     66, 29, 7, 52, 16, 83, 31, 10, 59, 44,
     1, 72, 36, 20, 85, 8, 40, 63, 28, 95
 ]
