@@ -43,21 +43,37 @@ print(wine_reviews.iloc[0,1])
 
 # print(wine_reviews.loc[wine_reviews.price.isnull()])
 
-print(reviews.points.describe())
-print(reviews.country.describe())
-print(reviews.designation.unique())
-print(reviews.country.value_counts())
+# print(reviews.points.describe())
+# print(reviews.country.describe())
+# print(reviews.designation.unique())
+# print(reviews.country.value_counts())
+#
+# reviews['points_centered'] = reviews.points - reviews.points.mean()
+# reviews['points_median'] = reviews.points.median()
+#
+# print(reviews[['points', 'points_centered', 'points_median']].head())
+#
+# def preobrazovator(points):
+#     points = points/100
+#     return points
+#
+# reviews['new_colomn'] = reviews.points.map(preobrazovator)
+#
+# print(reviews.new_colomn.describe())
+# print(reviews.new_colomn.head())
 
-reviews['points_centered'] = reviews.points - reviews.points.mean()
-reviews['points_median'] = reviews.points.median()
 
-print(reviews[['points', 'points_centered', 'points_median']].head())
 
-def preobrazovator(points):
-    points = points/100
-    return points
+def stars(my_row):
+    if my_row.country == 'Canada':
+        return 3
+    elif my_row.points >= 95:
+        return 3
+    elif my_row.points > 85 and my_row.points < 95:
+        return 2
+    else:
+        return 1
 
-reviews['new_colomn'] = reviews.points.map(preobrazovator)
 
-print(reviews.new_colomn.describe())
-print(reviews.new_colomn.head())
+star_ratings = reviews.apply(stars, axis = 'columns')
+print(star_ratings)
