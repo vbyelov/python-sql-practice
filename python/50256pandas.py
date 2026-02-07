@@ -63,17 +63,25 @@ print(wine_reviews.iloc[0,1])
 # print(reviews.new_colomn.head())
 
 
+#
+# def stars(my_row):
+#     if my_row.country == 'Canada':
+#         return 3
+#     elif my_row.points >= 95:
+#         return 3
+#     elif my_row.points > 85 and my_row.points < 95:
+#         return 2
+#     else:
+#         return 1
+#
+#
+# star_ratings = reviews.apply(stars, axis = 'columns')
+# print(star_ratings)
 
-def stars(my_row):
-    if my_row.country == 'Canada':
-        return 3
-    elif my_row.points >= 95:
-        return 3
-    elif my_row.points > 85 and my_row.points < 95:
-        return 2
-    else:
-        return 1
+print(reviews.groupby('points').points.count())
 
+print(reviews.groupby('country').country.count())
 
-star_ratings = reviews.apply(stars, axis = 'columns')
-print(star_ratings)
+italywines = reviews.loc[reviews['country'] == 'Italy']
+
+print(italywines.groupby('points').points.count())
