@@ -78,10 +78,21 @@ print(wine_reviews.iloc[0,1])
 # star_ratings = reviews.apply(stars, axis = 'columns')
 # print(star_ratings)
 
-print(reviews.groupby('points').points.count())
+# print(reviews.groupby('points').points.count())
+#
+# print(reviews.groupby('country').country.count())
+#
+# italywines = reviews.loc[reviews['country'] == 'Italy']
+#
+# print(italywines.groupby('points').points.count())
 
-print(reviews.groupby('country').country.count())
 
-italywines = reviews.loc[reviews['country'] == 'Italy']
+print(reviews.groupby(['country']).price.agg([len, min, max]))
 
-print(italywines.groupby('points').points.count())
+best_wine_by_price = (
+    reviews.groupby('price')
+           .points
+           .max()
+           .sort_index()
+)
+print(best_wine_by_price)
