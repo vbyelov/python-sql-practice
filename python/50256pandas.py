@@ -87,12 +87,60 @@ print(wine_reviews.iloc[0,1])
 # print(italywines.groupby('points').points.count())
 
 
-print(reviews.groupby(['country']).price.agg([len, min, max]))
+# print(reviews.groupby(['country']).price.agg([len, min, max]))
+#
+# best_wine_by_price = (
+#     reviews.groupby('price')
+#            .points
+#            .max()
+#            .sort_index()
+# )
+# print(best_wine_by_price)
+#
+# variety = reviews.groupby('variety') \
+#        .price \
+#        .agg(['min', 'max'])
+#
+# print(variety)
+#
+# print(reviews.dtypes)
+#
+# print(reviews['country'].isnull().sum())
+#
+# print(wine_reviews['price'].isnull().sum())
 
-best_wine_by_price = (
-    reviews.groupby('price')
-           .points
-           .max()
-           .sort_index()
-)
-print(best_wine_by_price)
+
+import pandas as pd
+
+# sample data
+a = pd.DataFrame({
+    'id': [1, 2, 3],
+    'value_a': ['A', 'B', 'C']
+})
+
+b = pd.DataFrame({
+    'id': [2, 3, 4],
+    'value_b': ['X', 'Y', 'Z']
+})
+
+# INNER JOIN (only matching keys)
+inner_join = pd.merge(a, b, on='id', how='inner')
+
+# LEFT JOIN (all from a)
+left_join = pd.merge(a, b, on='id', how='left')
+
+# RIGHT JOIN (all from b)
+right_join = pd.merge(a, b, on='id', how='right')
+
+# OUTER JOIN (all from both)
+outer_join = pd.merge(a, b, on='id', how='outer')
+
+# JOIN with different column names
+# pd.merge(a, b, left_on='id', right_on='other_id', how='left')
+
+# JOIN by index
+# pd.merge(a, b, left_index=True, right_index=True)
+
+# shortcut join by index
+# a.join(b)
+
