@@ -2,7 +2,7 @@ import random
 import string
 import choice
 import time
-ALPHABET = string.ascii_letters + string.digits
+ALPHABET = string.ascii_letters + string.digits + string.punctuation
 
 print(ALPHABET)
 
