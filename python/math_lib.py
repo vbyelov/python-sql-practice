@@ -2,9 +2,17 @@
 import math as mate, os as o, time as t
 import os
 
-from math import pi as PI, sin as SIN, sqrt as SQRT
+# from math import pi as PI, sin as SIN, sqrt as SQRT
+import math as m
 
-print (SQRT(SIN(7)))
+
+print(dir(m))
+
+for i in dir(m):
+    print(i)
+# print (SQRT(SIN(7)))
+
+
 
 t.sleep(1)
 print(os.environ)
