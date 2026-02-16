@@ -1,6 +1,9 @@
 # import module
+from sys import path
 
-from module import suml, prodl
+path.append('/Users/Analyst/Desktop/Pesochnica/Pycharm Pesochnica/python-sql-practice/python/modules/')
+
+from module1 import suml, prodl
 
 zeroes = [0 for i in range(5)]
 ones = [1 for i in range(5)]
