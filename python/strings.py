@@ -36,7 +36,8 @@ print(ord(char_2))
 import string
 
 def all_letters():
-    i = string.whitespace
+    # i = string.whitespace
+    i = 'Tomorrow is expected to be a sunny day'
     for letter in i:
         print(letter, '-', ord(letter))
     return None
