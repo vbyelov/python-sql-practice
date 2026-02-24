@@ -66,8 +66,62 @@ if "the great epsilon".endswith("on"):
 else:
     print("no")
 
-t = "zeta"
-print(t.endswith("a"))
-print(t.endswith("A"))
-print(t.endswith("et"))
-print(t.endswith("eta"))
+# t = "zeta"
+# print(t.endswith("a"))
+# print(t.endswith("A"))
+# print(t.endswith("et"))
+# print(t.endswith("eta"))
+#
+#
+# the_text = """A variation of the ordinary lorem ipsum
+# text has been used in typesetting since the 1960s
+# or earlier, when it was popularized by advertisements
+# for Letraset transfer sheets. It was introduced to
+# the Information Age in the mid-1980s by the Aldus Corporation,
+# which employed it in graphics and word-processing templates
+# for its desktop publishing program PageMaker (from Wikipedia)"""
+#
+# fnd = the_text.find('the')
+# while fnd != -1:
+#     print(fnd)
+#     fnd = the_text.find('the', fnd + 1)
+#
+# # Demonstrating the isalnum() method:
+# print('lambda30'.isalnum())
+# print('lambda'.isalnum())
+# print('30'.isalnum())
+# print('@'.isalnum())
+# print('lambda_30'.isalnum())
+# print(''.isalnum())
+
+# # Example 1: Demonstrating the isapha() method:
+# print("Moooo".isalpha())
+# print('Mu40'.isalpha())
+#
+# # Example 2: Demonstrating the isdigit() method:
+# print('2018'.isdigit())
+# print("Year2019".isdigit())
+#
+#
+# # Example 1: Demonstrating the islower() method:
+# print("Moooo".islower())
+# print('moooo'.islower())
+#
+# # Example 2: Demonstrating the isspace() method:
+# print(' \n '.isspace())
+# print(" ".isspace())
+# print("mooo mooo mooo".isspace())
+#
+# # Example 3: Demonstrating the isupper() method:
+# print("Moooo".isupper())
+# print('moooo'.isupper())
+# print('MOOOO'.isupper())
+
+print("This is it!".replace("is", "are", 1))
+print("This is it!".replace("is", "are", 2))
+
+
+# Demonstrating the rfind() method:
+print("tau tau tau".rfind("ta"))
+print("tau tau tau".rfind("ta", 9))
+print("tau tau tau".rfind("ta", 3, 9))
