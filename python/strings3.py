@@ -4,7 +4,7 @@ def mysplit(strng):
     for words in strng:
         words = words.strip()
         finallist.append(words)
-        if words == "that" : return None
+        # if words == "that" : return None
 
     return finallist
 
