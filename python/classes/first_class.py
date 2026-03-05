@@ -28,8 +28,21 @@ class Stack:  # Defining the Stack class.
     def __init__(self):  # Defining the constructor function.
         self.__stack_list = []
         print("Hi!")
+    def push(self, val):
+        self.__stack_list.append(val)
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+    def show(self):
+        print(self.__stack_list)
+        return self.__stack_list[::-1]
 
 
 stack_object = Stack()
 
-print(len(stack_object.__stack_list))
+for i in range(10):
+    stack_object.push(i)
+
+print(stack_object.show())
+
