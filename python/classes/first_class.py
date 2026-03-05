@@ -23,3 +23,15 @@ push(1)
 print(pop())
 print(pop())
 print(pop())
+
+class Stack:  # Defining the Stack class.
+    def __init__(self):  # Defining the constructor function.
+        print("Hi!")
+
+
+stack_object = Stack()
+
+class Stack2:
+    def __init__(self): print("Hi2!")
+
+stackobj2 = Stack2()
