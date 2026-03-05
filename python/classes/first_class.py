@@ -26,10 +26,10 @@ print(pop())
 
 class Stack:  # Defining the Stack class.
     def __init__(self):  # Defining the constructor function.
-        self.stack_list = []
+        self.__stack_list = []
         print("Hi!")
 
 
 stack_object = Stack()
 
-print(len(stack_object.stack_list))
+print(len(stack_object.__stack_list))
