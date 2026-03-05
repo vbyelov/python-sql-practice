@@ -37,6 +37,12 @@ class Stack:  # Defining the Stack class.
     def show(self):
         print(self.__stack_list)
         return self.__stack_list[::-1]
+    def get_stack(self):
+        return self.__stack_list
+    def __iter__(self):
+        return iter(self.__stack_list)
+
+
 
 
 stack_object = Stack()
@@ -46,3 +52,15 @@ for i in range(4,400,25):
 
 print(stack_object.show())
 
+
+st1 = Stack()
+st2 = Stack()
+
+for i in range(3,333,3):
+    st1.push(i)
+
+for x in st1:
+    st2.push(x / 2)
+
+for a,b in zip(st1,st2):
+    print(a,'--',b)
