@@ -41,7 +41,7 @@ class Stack:  # Defining the Stack class.
 
 stack_object = Stack()
 
-for i in range(10):
+for i in range(4,400,25):
     stack_object.push(i)
 
 print(stack_object.show())
