@@ -64,3 +64,7 @@ for x in st1:
 
 for a,b in zip(st1,st2):
     print(a,'--',b)
+
+
+class AddingStack(Stack):
+    pass
