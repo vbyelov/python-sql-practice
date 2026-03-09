@@ -90,3 +90,8 @@ print(stack_object.get_sum())
 
 for i in range(5):
     print(stack_object.pop())
+
+stack_object2 = AddingStack()
+for i in range(5,500,34):
+    stack_object2.push(i)
+    print(stack_object2.get_sum())
