@@ -60,15 +60,28 @@ print(example_object_2.__dict__, example_object_2.counter)
 print(example_object_3.__dict__, example_object_3.counter)
 
 
+# class ExampleClass:
+#     varia = 1
+#     def __init__(self, val):
+#         ExampleClass.varia = val
+#
+#
+# print(ExampleClass.__dict__)
+# example_object = ExampleClass(2)
+#
+# print(ExampleClass.__dict__)
+# print(example_object.__dict__)
+
 class ExampleClass:
-    varia = 1
     def __init__(self, val):
-        ExampleClass.varia = val
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
 
 
-print(ExampleClass.__dict__)
-example_object = ExampleClass(2)
+example_object = ExampleClass(1)
+print(example_object.a)
 
-print(ExampleClass.__dict__)
-print(example_object.__dict__)
+if hasattr(example_object, 'b'):    print(example_object.b)
 
