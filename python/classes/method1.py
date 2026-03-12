@@ -57,3 +57,61 @@ obj_2 = Classy()
 
 print(obj_1.var)
 print(obj_2.var)
+
+print('________')
+class Classy:
+    def __init__(self, value = 333):
+        self.var = value
+        self.arg = "4545"
+    def visible(self):
+        print("visible")
+
+    def __hidden(self):
+        print("hidden")
+
+
+obj = Classy()
+obj.visible()
+
+print('!!!')
+print(obj.__dict__)
+print('!!!')
+try:
+    obj.__hidden()
+except:
+    print("failed")
+
+obj._Classy__hidden()
+
+print(Classy.__dict__)
+
+print('Object __name__:', type(obj).__name__)
+print('Class __name__:', Classy.__name__)
+print('Class __module__:', Classy.__module__)
+
+print('Bases')
+
+class SuperOne:
+    pass
+
+
+class SuperTwo:
+    pass
+
+
+class Sub(SuperOne, SuperTwo):
+    pass
+
+
+def printBases(cls):
+    print('( ', end='')
+
+    for x in cls.__bases__:
+        print(x.__name__, end=' ')
+    print(')')
+
+
+printBases(SuperOne)
+printBases(SuperTwo)
+printBases(Sub)
+
