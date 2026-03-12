@@ -33,3 +33,27 @@ class Classy:
 
 obj = Classy()
 obj.method()
+
+class myclass:
+    def __init__(self, arg):
+        self.arg = arg
+
+obj1 = myclass("Seven")
+
+print(obj1.arg)
+
+obj1.arg = 12
+print(obj1.arg)
+
+print("------")
+
+class Classy:
+    def __init__(self, value = 333):
+        self.var = value
+
+
+obj_1 = Classy("Object")
+obj_2 = Classy()
+
+print(obj_1.var)
+print(obj_2.var)
