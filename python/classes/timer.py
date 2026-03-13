@@ -38,7 +38,20 @@ class Timer:
         #
 
     def prev_second(self):
-        #
+        if self.__seconds != 0:
+            self.__seconds -= 1
+
+        elif self.__minutes != 0:
+            self.__minutes -= 1
+            self.__seconds = 59
+        elif self.__hours != 0:
+            self.__hours -= 1
+            self.__minutes = 59
+            self.__seconds = 59
+        else:
+            self.__seconds = 59
+            self.__minutes = 59
+            self.__hours = 23
         # Write code here
         #
 
