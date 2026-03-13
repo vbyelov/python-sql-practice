@@ -15,10 +15,16 @@ def incIntsI(obj):
     for name in obj.__dict__.keys():
         if name.startswith('i'):
             val = getattr(obj, name)
-            if isinstance(val, int):
+            if isinstance(val, (int, float)):
                 setattr(obj, name, val + 1)
 
 
 print(obj.__dict__)
 incIntsI(obj)
 print(obj.__dict__)
+
+print(obj.ireal)
+
+print(getattr(obj, 'ireal'))
+setattr(obj, 'ireal', 7)
+print(obj.ireal)
