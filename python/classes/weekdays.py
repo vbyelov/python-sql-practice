@@ -7,7 +7,7 @@ class Weeker:
 
     def __init__(self, day):
 
-        if self.__day not in self.daylist:
+        if day not in self.daylist:
             raise WeekDayError('Invalid day')
         self.__day = day
 
