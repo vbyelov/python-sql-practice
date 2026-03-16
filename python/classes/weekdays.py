@@ -13,16 +13,18 @@ class Weeker:
 
 
     def __str__(self):
-        print(self.__day)
+        return (self.__day)
 
 
     def add_days(self, n):
+        currentpos = self.daylist.index(self.__day)
+        newpos = currentpos + n
+        self.__day =  self.daylist[newpos % 7]
 
-    #
-    # Write code here.
-    #
+
 
     def subtract_days(self, n):
+        self.add_days(-n)
 
 
 #
