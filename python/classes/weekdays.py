@@ -3,24 +3,18 @@ class WeekDayError(Exception):
 
 
 class Weeker:
-    daylist = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+    daylist = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
     def __init__(self, day):
 
         if self.__day not in self.daylist:
+            raise WeekDayError('Invalid day')
+        self.__day = day
 
-
-
-    #
-    # Write code here.
-    #
 
     def __str__(self):
+        print(self.__day)
 
-
-
-    # Write code here.
-    #
 
     def add_days(self, n):
 
