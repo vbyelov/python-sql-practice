@@ -27,11 +27,6 @@ class Weeker:
         self.add_days(-n)
 
 
-#
-# Write code here.
-#
-
-
 try:
     weekday = Weeker('Mon')
     print(weekday)
