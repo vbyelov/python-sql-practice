@@ -21,3 +21,9 @@ class TrackedVehicle(LandVehicle):
 
 k = TrackedVehicle()
 print(k)
+
+print(issubclass(TrackedVehicle, LandVehicle))
+print(issubclass(TrackedVehicle, Vehicle))
+print(issubclass(TrackedVehicle, LandVehicle))
+
+print(issubclass(Vehicle, TrackedVehicle))
