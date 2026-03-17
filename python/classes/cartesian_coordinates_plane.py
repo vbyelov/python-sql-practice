@@ -13,14 +13,14 @@ class Point:
        return self.__y
 
     def distance_from_xy(self, x, y):
-        #
-        # Write code here
-        #
+        dx = x - self.__x - x
+        dy = y - self.__y - y
+        return math.hypot(dx, dy)
 
     def distance_from_point(self, point):
-        #
-        # Write code here
-        #
+        return math.hypot(self.__x - point.getx(),
+                          self.__y - point.gety())
+
 
 
 point1 = Point(0, 0)
