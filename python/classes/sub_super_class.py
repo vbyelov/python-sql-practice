@@ -51,5 +51,8 @@ class Sub(Super):
 
 
 obj = Sub("Andy")
+obj2 = Super("Bob")
 
-print(obj)
+print(obj, obj2)
+print(obj.__str__())
+print(obj2.__str__())
