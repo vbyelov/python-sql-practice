@@ -19,7 +19,8 @@ class TrackedVehicle(LandVehicle):
     def __str__(self):
         return 'TrackedVehicle class printed'
 
-k = TrackedVehicle()
+x = k = Vehicle()
+
 print(k)
 
 print(issubclass(TrackedVehicle, LandVehicle))
@@ -27,3 +28,28 @@ print(issubclass(TrackedVehicle, Vehicle))
 print(issubclass(TrackedVehicle, LandVehicle))
 
 print(issubclass(Vehicle, TrackedVehicle))
+
+print(issubclass(LandVehicle, LandVehicle))
+
+print(isinstance(k, TrackedVehicle))
+
+print(Vehicle is Vehicle)
+
+print('Next class')
+
+class Super:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Super):
+    def __init__(self, name):
+        Super.__init__(self, name)
+
+
+obj = Sub("Andy")
+
+print(obj)
