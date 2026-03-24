@@ -83,32 +83,54 @@ class Super:
 # print(list1 is list2)
 
 
-# Testing properties: class variables.
-class Super:
-    supVar = 1
+# # Testing properties: class variables.
+# class Super:
+#     supVar = 1
+#
+#
+# class Sub(Super):
+#     subVar = 2
+#
+#
+# obj = Sub()
+#
+# print(obj.subVar)
+# print(obj.supVar)
+#
+# class Super:
+#     def __init__(self):
+#         self.supVar = 11
+#
+#
+# class Sub(Super):
+#     def __init__(self):
+#         super().__init__()
+#
+#
+#
+# obj = Sub()
+#
+# print(obj.subVar)
+# print(obj.supVar)
+
+class Left:
+    var = "L"
+    var_left = "LL"
+    def fun(self):
+        return "Left"
 
 
-class Sub(Super):
-    subVar = 2
+class Right:
+    var = "R"
+    var_right = "RR"
+    def fun(self):
+        return "Right"
+
+
+class Sub(Left, Right):
+    pass
 
 
 obj = Sub()
 
-print(obj.subVar)
-print(obj.supVar)
-
-class Super:
-    def __init__(self):
-        self.supVar = 11
-
-
-class Sub(Super):
-    def __init__(self):
-        super().__init__()
-
-
-
-obj = Sub()
-
-print(obj.subVar)
-print(obj.supVar)
+print(obj.var, obj.var_left, obj.var_right, obj.fun())
