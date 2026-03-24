@@ -75,3 +75,9 @@ for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
     for cls in [Vehicle, LandVehicle, TrackedVehicle]:
         print(isinstance(obj, cls), end="\t")
     print()
+
+print('_________')
+
+list1 = [1, 2, 3]
+list2 = list1
+print(list1 is list2)
