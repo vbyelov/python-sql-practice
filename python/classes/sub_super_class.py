@@ -54,30 +54,61 @@ class Super:
 #
 # print(obj)
 
+#
+# class Vehicle:
+#     pass
+#
+#
+# class LandVehicle(Vehicle):
+#     pass
+#
+#
+# class TrackedVehicle(LandVehicle):
+#     pass
+#
+#
+# my_vehicle = Vehicle()
+# my_land_vehicle = LandVehicle()
+# my_tracked_vehicle = TrackedVehicle()
+#
+# for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
+#     for cls in [Vehicle, LandVehicle, TrackedVehicle]:
+#         print(isinstance(obj, cls), end="\t")
+#     print()
+#
+# print('_________')
+#
+# list1 = [1, 2, 3]
+# list2 = list1
+# print(list1 is list2)
 
-class Vehicle:
-    pass
+
+# Testing properties: class variables.
+class Super:
+    supVar = 1
 
 
-class LandVehicle(Vehicle):
-    pass
+class Sub(Super):
+    subVar = 2
 
 
-class TrackedVehicle(LandVehicle):
-    pass
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+class Super:
+    def __init__(self):
+        self.supVar = 11
 
 
-my_vehicle = Vehicle()
-my_land_vehicle = LandVehicle()
-my_tracked_vehicle = TrackedVehicle()
+class Sub(Super):
+    def __init__(self):
+        super().__init__()
 
-for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
-    for cls in [Vehicle, LandVehicle, TrackedVehicle]:
-        print(isinstance(obj, cls), end="\t")
-    print()
 
-print('_________')
 
-list1 = [1, 2, 3]
-list2 = list1
-print(list1 is list2)
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
