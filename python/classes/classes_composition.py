@@ -22,8 +22,7 @@ class Vehicle:
 
 wheeled = Vehicle(Wheels())
 tracked = Vehicle(Tracks())
-tracked2 = Vehicle(Tracks())
-
+# tracked2 = Vehicle(Tracks())
 wheeled.turn(True)
 tracked.turn(False)
 
