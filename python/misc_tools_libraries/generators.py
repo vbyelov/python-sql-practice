@@ -75,5 +75,5 @@ def powers_of_2(n):
         power *= 2
 
 
-for v in powers_of_2(4.5)
+for v in powers_of_2(4)
     print(v)
