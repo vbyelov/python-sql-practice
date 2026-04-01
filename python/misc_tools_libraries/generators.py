@@ -52,7 +52,28 @@ class Class:
         return self.__iter;
 
 
-object = Class(8)
+#
+# object = Class(8)
+#
+# for i in object:
+#     print(i)
+#
+#
+#     def fun(n):
+#         for i in range(n):
+#             yield i
+#
+#
+#     for v in fun(5):
+#         print(v)
 
-for i in object:
-    print(i)
+
+def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for v in powers_of_2(4.5)
+    print(v)
