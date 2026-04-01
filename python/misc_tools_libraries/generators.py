@@ -67,7 +67,27 @@ class Class:
 #     for v in fun(5):
 #         print(v)
 
-
+#
+# def powers_of_2(n):
+#     power = 1
+#     for i in range(n):
+#         yield power
+#         power *= 2
+#
+#
+# for v in powers_of_2(4):
+#     print(v)
+#
+# def powers_of_2(n):
+#     power = 1
+#     for i in range(n):
+#         yield power
+#         power *= 2
+#
+#
+# t = [x for x in powers_of_2(5)]
+# print(t)
+#
 def powers_of_2(n):
     power = 1
     for i in range(n):
@@ -75,16 +95,9 @@ def powers_of_2(n):
         power *= 2
 
 
-for v in powers_of_2(4):
-    print(v)
-
-def powers_of_2(n):
-    power = 1
-    for i in range(n):
-        yield power
-        power *= 2
-
-
-t = [x for x in powers_of_2(5)]
+t = list(powers_of_2(3))
 print(t)
 
+tt = [x + 10 for x in powers_of_2(7)]
+
+print(tt)
