@@ -19,3 +19,6 @@ print()
 for v in the_generator:
     print(v, end=" ")
 print()
+
+print(len(the_list))
+# print(len(the_generator))
