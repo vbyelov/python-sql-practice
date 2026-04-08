@@ -19,6 +19,9 @@ print()
 
 for j in mynewlist2:
     print(j, end=":")
+print()
+print('______________')
+myrandomlistfunc = map(xvadrat, myrandomlist)
 
-myrandomlistfunc = map(xkvadrat, myrandomlist)
-print(myrandomlistfunc)
+for i in myrandomlistfunc:
+    print(i, end=":")
