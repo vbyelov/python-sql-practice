@@ -60,6 +60,15 @@ print(list(finalstep))
 
 
 
-
 final2 = [x ** 2 for x in nums if x > 0 and x % 2 == 0]
 print(final2)
+
+
+from random import seed, randint
+
+seed()
+data = [randint(-100,100) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
