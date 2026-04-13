@@ -72,3 +72,16 @@ filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
 
 print(data)
 print(filtered)
+
+def make_multiplier(a):
+    def resultat(x):
+        x*= a
+        return x
+    return resultat
+
+
+double = make_multiplier(2)
+print(double(5))  # 10
+
+triple = make_multiplier(3)
+print(triple(5))  # 15
