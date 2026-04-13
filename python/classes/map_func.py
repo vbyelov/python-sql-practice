@@ -88,11 +88,11 @@ print(triple(5))  # 15
 
 def make_prefix(string):
     def prefix(x):
-        return string +x
+        return string + x
     return prefix
 
 add_hello = make_prefix("Hello ")
+add_hi = make_prefix("Hi ")
 print(add_hello("John"))   # Hello John
 
-add_hi = make_prefix("Hi ")
 print(add_hi("Anna"))      # Hi Anna
