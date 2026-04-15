@@ -17,6 +17,6 @@ try:
     content = bf.read()
     bf.close()
     for byte in content:
-        print(byte)
+        print(hex(byte))
 except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
