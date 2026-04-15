@@ -9,3 +9,6 @@ try:
 	fo.close()
 except IOError as e:
 	print("I/O error occurred: ", strerror(e.errno))
+
+string = open('newtext.txt', 'r').read()
+print(string)
