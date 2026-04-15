@@ -1,9 +1,22 @@
+from os import strerror
+
 data = bytearray(10)
 
 for i in range(len(data)):
-    data[i] = 10 - i
+    data[i] = 10 + i
 
-for b in data:
-    print(hex(b))
+try:
+    bf = open('file.bin', 'wb')
+    bf.write(data)
+    bf.close()
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
 
-print (data)
+try:
+    bf = open('file.bin', 'rb')
+    content = bf.read()
+    bf.close()
+    for byte in content:
+        print(byte)
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
