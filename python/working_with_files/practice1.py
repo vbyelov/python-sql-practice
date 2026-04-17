@@ -18,8 +18,7 @@ Requirements:
 5. Print a histogram in alphabetical order.
 6. Show only letters that appear at least once.
 """
-
-
+import sys
 source_filename = input("Enter file name: ")
 try:
     with open(source_filename) as src_file:
