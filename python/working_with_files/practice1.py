@@ -19,6 +19,7 @@ Requirements:
 6. Show only letters that appear at least once.
 """
 import sys
+
 source_filename = input("Enter file name: ")
 try:
     with open(source_filename) as src_file:
@@ -35,3 +36,13 @@ for char in content:
 
 for letter in sorted(dictionary):
         print(letter,'-->', dictionary[letter])
+
+sorted_items = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
+
+try:
+    with open(source_filename + '.hist', 'w') as dest_file:
+        for letter, count in sorted_items:
+            dest_file.write(f"{letter} -> {count}\n")
+except OSError:
+    print("Can not save file")
+    sys.exit()
