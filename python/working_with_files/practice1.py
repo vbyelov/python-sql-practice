@@ -39,6 +39,45 @@ for letter in sorted(dictionary):
 
 sorted_items = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
 
+"""
+Task: Letter Frequency Histogram — Part 2 (Improvement)
+
+Description:
+Improve the previous program to make the output more useful and structured.
+
+Requirements:
+
+1. Sort the histogram by frequency (descending order):
+   - letters with higher counts should appear first
+
+2. Use lambda inside sorted():
+   - sort by dictionary values (counts), not keys
+
+3. Save the result to a new file:
+   - the new file name should be the same as the input file
+   - add the suffix ".hist" to the original name
+
+4. Write the histogram to the file in the format:
+   letter -> count
+
+Example:
+
+Input file content:
+cBabAa
+
+Output file (samplefile.txt.hist):
+
+a -> 3
+b -> 2
+c -> 1
+
+Notes:
+- Use dictionary.items() to get (letter, count) pairs
+- Use lambda x: x[1] to sort by frequency
+- Use reverse=True for descending order
+- Use with open(..., "w") to write to file
+"""
+
 try:
     with open(source_filename + '.hist', 'w') as dest_file:
         for letter, count in sorted_items:
