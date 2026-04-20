@@ -47,16 +47,45 @@
 #
 # =========================================
 
-srcfile = input("File name, please:")
+import sys
+
+students = {}
+srcfile = input("File name, please: ")
 
 try:
-    with open(srcfile, 'rt')
-        for line in srcfile:
+    with open(srcfile, 'rt') as source:
+        for line in source:
             parts = line.split()
-    first_name = parts[0]
 
-    last_name = parts[1]
+            if len(parts) != 3:
+                raise BadLine()
 
-    points = float(parts[2])
+            first_name = parts[0]
+            last_name = parts[1]
 
-    key = first_name + " " + last_name
+            try:
+                points = float(parts[2])
+            except ValueError:
+                raise BadLine()
+
+            key = first_name + " " + last_name
+
+            if key in students:
+                students[key] += points
+            else:
+                students[key] = points
+
+    if not students:
+        raise FileEmpty()
+
+except IOError:
+    print("Cannot open file")
+    sys.exit()
+
+except BadLine:
+    print("Bad line detected")
+    sys.exit()
+
+except FileEmpty:
+    print("File is empty")
+    sys.exit()
