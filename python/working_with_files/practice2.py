@@ -1,3 +1,4 @@
+import sys
 # =========================================
 # TASK: Students Points Aggregation
 #
@@ -48,6 +49,14 @@
 # =========================================
 
 import sys
+class StudentsDataException(Exception):
+    pass
+
+class BadLine(StudentsDataException):
+    pass
+
+class FileEmpty(StudentsDataException):
+    pass
 
 students = {}
 srcfile = input("File name, please: ")
@@ -75,6 +84,23 @@ try:
             else:
                 students[key] = points
 
+    if not students:
+        raise FileEmpty()
+
+    for key in sorted(students):
+        print(f"{key}\t{students[key]}")
+
+except IOError:
+    print("Cannot open file")
+    sys.exit()
+
+except BadLine:
+    print("Bad line detected")
+    sys.exit()
+
+except FileEmpty:
+    print("File is empty")
+    sys.exit()
     if not students:
         raise FileEmpty()
 
