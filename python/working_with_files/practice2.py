@@ -46,3 +46,17 @@
 # - Use a dictionary to store results.
 #
 # =========================================
+
+srcfile = input("File name, please:")
+
+try:
+    with open(srcfile, 'rt')
+        for line in srcfile:
+            parts = line.split()
+    first_name = parts[0]
+
+    last_name = parts[1]
+
+    points = float(parts[2])
+
+    key = first_name + " " + last_name
