@@ -78,6 +78,9 @@ try:
     if not students:
         raise FileEmpty()
 
+for key, value in sorted(students.items()):
+    print(f"{key}\t{value}")
+
 except IOError:
     print("Cannot open file")
     sys.exit()
