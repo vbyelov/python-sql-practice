@@ -101,8 +101,7 @@ except BadLine:
 except FileEmpty:
     print("File is empty")
     sys.exit()
-    if not students:
-        raise FileEmpty()
+
 
 for key, value in sorted(students.items()):
     print(f"{key}\t{value}")
