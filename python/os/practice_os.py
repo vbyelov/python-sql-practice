@@ -25,3 +25,10 @@
 # .../tree/cpp/other_courses/python
 # .../tree/c/other_courses/python
 
+import os
+
+def find(path, dir_name):
+    pass
+
+for name in os.listdir(path):
+    print(name)
