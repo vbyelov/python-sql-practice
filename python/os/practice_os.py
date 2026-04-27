@@ -28,7 +28,5 @@
 import os
 
 def find(path, dir_name):
-    pass
-
-for name in os.listdir(path):
+    for name in os.listdir(path):
     print(name)
