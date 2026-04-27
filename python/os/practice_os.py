@@ -27,6 +27,14 @@
 
 import os
 
+import os
+
 def find(path, dir_name):
     for name in os.listdir(path):
-    print(name)
+        full_path = os.path.join(path, name)
+
+        if os.path.isdir(full_path):
+            if name == dir_name:
+                print(os.path.abspath(full_path))
+
+            find(full_path, dir_name)
