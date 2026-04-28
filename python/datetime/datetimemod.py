@@ -77,7 +77,14 @@ from datetime import datetime
 
 dt = datetime(2026, 4, 28, 14, 53)
 
+dn = datetime.now()
+print('Now is:', dn)
+
 
 print("Datetime:", dt)
 print("Date:", dt.date())
 print("Time:", dt.time())
+
+print("today:", datetime.today())
+print("now:", datetime.now())
+print("utcnow:", datetime.utcnow())
