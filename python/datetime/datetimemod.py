@@ -53,9 +53,15 @@ class Student:
         print("I slept well! I feel great!")
 
 student = Student()
-student.take_nap(5)
+student.take_nap(0.5)
 
 import time
 
 timestamp = 1592879180
 print(time.ctime(timestamp))
+
+import time
+
+timestamp = 1572879180
+print(time.gmtime(timestamp))
+print(time.localtime(timestamp))
