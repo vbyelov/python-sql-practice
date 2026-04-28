@@ -73,3 +73,10 @@ st = time.gmtime(timestamp)
 print(time.asctime(st))
 print(time.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))
 
+from datetime import datetime
+
+dt = datetime(2026, 4, 28, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
