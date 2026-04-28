@@ -93,3 +93,9 @@ from datetime import datetime
 print("Timestamp----")
 dt = datetime(2020, 10, 4, 14, 55)
 print("Timestamp:", dt.timestamp())
+
+
+from datetime import date
+
+d = date(2020, 1, 4)
+print(d.strftime('%Y/%m/%d'))
