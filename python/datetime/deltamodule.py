@@ -13,3 +13,5 @@ print(d)
 
 dt = datetime(2019, 10, 4, 14, 53) + delta2
 print(dt)
+
+print(d+dt)

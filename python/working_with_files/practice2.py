@@ -110,10 +110,10 @@ except IOError:
     print("Cannot open file")
     sys.exit()
 
-except BadLine:
-    print("Bad line detected")
-    sys.exit()
-
-except FileEmpty:
-    print("File is empty")
-    sys.exit()
+# except BadLine:
+#     print("Bad line detected")
+#     sys.exit()
+#
+# except FileEmpty:
+#     print("File is empty")
+#     sys.exit()
